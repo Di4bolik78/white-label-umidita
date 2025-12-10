@@ -57,13 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        teal: {
-          DEFAULT: "hsl(var(--teal))",
-          light: "hsl(var(--teal-light))",
+        aqua: {
+          DEFAULT: "hsl(var(--aqua))",
+          dark: "hsl(var(--aqua-dark))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          hover: "hsl(var(--gold-hover))",
+        "dark-blue": {
+          DEFAULT: "hsl(var(--dark-blue))",
+          light: "hsl(var(--dark-blue-light))",
         },
       },
       fontFamily: {
