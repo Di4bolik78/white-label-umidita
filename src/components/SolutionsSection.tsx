@@ -55,7 +55,7 @@ const SolutionsSection = () => {
               {solutions.map((solution, index) => (
                 <li 
                   key={index}
-                  className="flex items-center gap-3 text-primary font-medium text-lg hover:text-teal-light transition-colors cursor-pointer group"
+                  className="flex items-center gap-3 text-primary font-medium text-lg hover:text-secondary transition-colors cursor-pointer group"
                 >
                   <ChevronRight className="w-5 h-5 text-secondary group-hover:translate-x-1 transition-transform" />
                   <span className="border-b-2 border-transparent group-hover:border-secondary transition-all">
