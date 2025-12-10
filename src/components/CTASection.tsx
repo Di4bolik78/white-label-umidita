@@ -33,7 +33,7 @@ const CTASection = () => {
             <p className="text-primary-foreground/80 text-lg mb-2">
               Specialisti in Soluzioni contro l'Umidità
             </p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-secondary uppercase tracking-wide">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground uppercase tracking-wide">
               Richiedi Informazioni
             </h2>
           </div>
