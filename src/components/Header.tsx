@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,7 +14,6 @@ const Header = () => {
 
   const scrollToContact = () => {
     document.getElementById('contatto')?.scrollIntoView({ behavior: 'smooth' });
-    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -36,66 +33,14 @@ const Header = () => {
             </span>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#soluzioni" className="text-primary hover:text-secondary transition-colors font-medium">
-              Soluzioni
-            </a>
-            <a href="#tipi-umidita" className="text-primary hover:text-secondary transition-colors font-medium">
-              Tipi di Umidità
-            </a>
-            <a href="#faq" className="text-primary hover:text-secondary transition-colors font-medium">
-              FAQ
-            </a>
-            <Button 
-              onClick={scrollToContact}
-              className="bg-secondary hover:bg-aqua-dark text-secondary-foreground font-semibold px-6 py-2 rounded-full"
-            >
-              Contattaci
-            </Button>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-primary"
+          {/* CTA Button */}
+          <Button 
+            onClick={scrollToContact}
+            className="bg-secondary hover:bg-aqua-dark text-secondary-foreground font-semibold px-6 py-2 rounded-full"
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+            Contattaci
+          </Button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in">
-            <a 
-              href="#soluzioni" 
-              className="text-primary hover:text-secondary transition-colors font-medium py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Soluzioni
-            </a>
-            <a 
-              href="#tipi-umidita" 
-              className="text-primary hover:text-secondary transition-colors font-medium py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Tipi di Umidità
-            </a>
-            <a 
-              href="#faq" 
-              className="text-primary hover:text-secondary transition-colors font-medium py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              FAQ
-            </a>
-            <Button 
-              onClick={scrollToContact}
-              className="bg-secondary hover:bg-aqua-dark text-secondary-foreground font-semibold px-6 py-2 rounded-full w-full"
-            >
-              Contattaci
-            </Button>
-          </nav>
-        )}
       </div>
     </header>
   );
