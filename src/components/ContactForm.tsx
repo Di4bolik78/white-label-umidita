@@ -170,14 +170,14 @@ const ContactForm = () => {
               <Button 
                 type="button" 
                 onClick={nextStep}
-                className="btn-glow bg-secondary hover:bg-aqua-dark text-white px-8 h-12 font-semibold"
+                className="btn-glow bg-secondary text-white px-8 h-12 font-semibold"
               >
                 Avanti
               </Button>
             ) : (
               <Button 
                 type="submit"
-                className="btn-glow bg-secondary hover:bg-aqua-dark text-white px-8 h-12 font-semibold"
+                className="btn-glow bg-secondary text-white px-8 h-12 font-semibold"
               >
                 CONSULTA GRATIS
               </Button>
