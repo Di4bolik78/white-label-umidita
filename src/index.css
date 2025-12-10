@@ -40,8 +40,8 @@ All colors MUST be HSL.
 
     /* Custom colors */
     --aqua: 165 96% 39%; /* #04c4a1 */
-    --aqua-dark: 165 96% 32%;
-    --aqua-glow: 165 96% 50%;
+    --aqua-light: 165 96% 55%;
+    --aqua-glow: 165 96% 60%;
     --dark-blue: 251 100% 9%; /* #090030 */
     --dark-blue-light: 251 60% 20%;
 
@@ -85,8 +85,8 @@ All colors MUST be HSL.
     --ring: 165 96% 39%;
     
     --aqua: 165 96% 39%;
-    --aqua-dark: 165 96% 32%;
-    --aqua-glow: 165 96% 50%;
+    --aqua-light: 165 96% 55%;
+    --aqua-glow: 165 96% 60%;
     --dark-blue: 251 100% 9%;
     --dark-blue-light: 251 60% 20%;
 
@@ -117,6 +117,7 @@ All colors MUST be HSL.
   }
   
   .btn-glow:hover {
-    box-shadow: 0 0 20px hsl(var(--aqua) / 0.6), 0 0 40px hsl(var(--aqua) / 0.4);
+    background-color: hsl(var(--aqua-light)) !important;
+    box-shadow: 0 0 25px hsl(var(--aqua-glow) / 0.7), 0 0 50px hsl(var(--aqua-glow) / 0.5);
   }
 }

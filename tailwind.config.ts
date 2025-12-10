@@ -59,7 +59,8 @@ export default {
         },
         aqua: {
           DEFAULT: "hsl(var(--aqua))",
-          dark: "hsl(var(--aqua-dark))",
+          light: "hsl(var(--aqua-light))",
+          glow: "hsl(var(--aqua-glow))",
         },
         "dark-blue": {
           DEFAULT: "hsl(var(--dark-blue))",
