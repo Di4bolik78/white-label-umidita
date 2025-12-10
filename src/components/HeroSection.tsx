@@ -45,7 +45,7 @@ const HeroSection = () => {
           
           <Button 
             onClick={scrollToContact}
-            className="bg-secondary hover:bg-aqua-dark text-secondary-foreground font-semibold px-8 py-6 text-lg rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-secondary/30"
+            className="btn-glow bg-secondary hover:bg-aqua-dark text-white font-semibold px-8 py-6 text-lg rounded-full transition-all duration-300"
           >
             Richiedi Informazioni Gratis
           </Button>

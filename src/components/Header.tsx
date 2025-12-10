@@ -36,7 +36,7 @@ const Header = () => {
           {/* CTA Button */}
           <Button 
             onClick={scrollToContact}
-            className="bg-secondary hover:bg-aqua-dark text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="btn-glow bg-secondary hover:bg-aqua-dark text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-300"
           >
             Contattaci
           </Button>
