@@ -39,7 +39,7 @@ const HeroSection = () => {
             Consulta<br />Umidità
           </h1>
           
-          <p className="text-muted-foreground text-lg md:text-xl mb-8 leading-relaxed">
+          <p className="text-primary text-lg md:text-xl mb-8 leading-relaxed">
             Disponiamo di professionisti in tutta Italia per risolvere i vostri problemi di umidità e offrirvi una soluzione definitiva.
           </p>
           
