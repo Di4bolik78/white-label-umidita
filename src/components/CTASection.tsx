@@ -42,7 +42,7 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
             <Button 
               onClick={scrollToContact}
-              className="bg-secondary hover:bg-aqua-dark text-secondary-foreground font-semibold px-8 py-6 rounded-full transition-all duration-300"
+              className="btn-glow bg-secondary hover:bg-aqua-dark text-white font-semibold px-8 py-6 rounded-full transition-all duration-300"
             >
               Richiedi Informazioni
             </Button>
