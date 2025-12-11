@@ -9,7 +9,7 @@ import { Loader2, CheckCircle, XCircle } from "lucide-react";
 const ContactForm = () => {
   const [step, setStep] = useState(1);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
-  const [privacyError, setPrivacyError] = useState(false);
+  const [submitAttempted, setSubmitAttempted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
@@ -56,24 +56,22 @@ const ContactForm = () => {
         return;
       }
     }
-    setPrivacyError(false);
+    setSubmitAttempted(false);
     setStep(prev => Math.min(prev + 1, 3));
   };
 
   const prevStep = () => {
-    setPrivacyError(false);
+    setSubmitAttempted(false);
     setStep(prev => Math.max(prev - 1, 1));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitAttempted(true);
     
     if (!privacyAccepted) {
-      setPrivacyError(true);
       return;
     }
-    
-    setPrivacyError(false);
 
     setIsLoading(true);
     setSubmitStatus('idle');
@@ -94,7 +92,7 @@ const ContactForm = () => {
   const resetForm = () => {
     setStep(1);
     setPrivacyAccepted(false);
-    setPrivacyError(false);
+    setSubmitAttempted(false);
     setSubmitStatus('idle');
     setFormData({
       nome: "",
@@ -262,7 +260,6 @@ const ContactForm = () => {
                           checked={privacyAccepted}
                           onCheckedChange={(checked) => {
                             setPrivacyAccepted(checked as boolean);
-                            if (checked) setPrivacyError(false);
                           }}
                           className="mt-1"
                         />
@@ -279,7 +276,7 @@ const ContactForm = () => {
                           e do il consenso al trattamento dei miei dati<span className="text-destructive">*</span>
                         </label>
                       </div>
-                      {privacyError && (
+                      {submitAttempted && !privacyAccepted && (
                         <p className="text-destructive text-sm ml-7">Devi accettare l'informativa sulla privacy</p>
                       )}
                     </div>
