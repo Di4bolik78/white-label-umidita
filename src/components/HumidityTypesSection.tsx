@@ -2,17 +2,17 @@ const humidityTypes = [
   {
     number: "01",
     title: "Umidità da Condensa",
-    description: "Eccesso di vapore acqueo sulle finestre o macchie di muffa sulle pareti.",
+    description: "Eccesso di vapore acqueo sulle tue finestre o macchie di muffa sulle pareti.",
   },
   {
     number: "02",
-    title: "Umidità da Risalita Capillare",
-    description: "Macchie di umidità nelle zone basse delle pareti.",
+    title: "Umidità da Risalita",
+    description: "Macchie di umidità nelle parti basse delle tue pareti.",
   },
   {
     number: "03",
-    title: "Umidità da Infiltrazioni",
-    description: "Appaiono o aumentano quando piove. I luoghi più comuni sono piani terra, cantine e garage.",
+    title: "Umidità da Infiltrazioni Laterali",
+    description: "Compaiono o aumentano quando piove. I luoghi più comuni sono i piani terra, i seminterrati, gli interrati e i garage.",
   },
 ];
 
@@ -20,9 +20,12 @@ const HumidityTypesSection = () => {
   return (
     <section className="py-20 px-4 bg-muted">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-4">
           Qual è il tuo tipo di umidità?
         </h2>
+        <p className="text-lg text-muted-foreground text-center mb-16">
+          Scopri le più comuni
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {humidityTypes.map((type, index) => (
