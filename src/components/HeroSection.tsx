@@ -17,9 +17,9 @@ const HeroSection = () => {
       {/* Dark overlay for better readability */}
       <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
 
-      <div className="container mx-auto px-4 py-8 md:py-16 relative z-10 flex justify-center md:justify-start">
-        {/* White transparent container */}
-        <div className="bg-white/85 md:bg-white/75 backdrop-blur-sm rounded-2xl p-6 md:p-12 max-w-xl shadow-2xl w-full md:w-auto">
+      <div className="container mx-auto px-4 py-8 md:py-16 relative z-10 flex justify-center md:justify-start h-full">
+        {/* White transparent container - occupies half the hero section */}
+        <div className="bg-white/60 md:bg-white/50 backdrop-blur-sm rounded-2xl p-6 md:p-12 shadow-2xl w-full md:w-1/2 flex flex-col justify-center">
           {/* Decorative stripes */}
           <div className="flex gap-1 mb-4 md:mb-6">
             {[...Array(8)].map((_, i) => (
