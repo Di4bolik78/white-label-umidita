@@ -35,7 +35,7 @@ const HeroSection = () => {
             Specialisti in Soluzioni contro l'Umidità
           </p>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary mb-6 leading-tight">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary mb-6 leading-tight">
             Consulenza Personalizzata<br />Contro Umidità
           </h1>
           
@@ -45,7 +45,7 @@ const HeroSection = () => {
           
           <Button 
             onClick={scrollToContact}
-            className="btn-glow bg-secondary text-white font-semibold px-8 py-4 text-lg rounded-md transition-all duration-300"
+            className="btn-glow bg-secondary text-white font-semibold px-10 py-6 text-xl rounded-md transition-all duration-300"
           >
             Richiedi informazioni
           </Button>
