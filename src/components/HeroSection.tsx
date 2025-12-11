@@ -36,18 +36,18 @@ const HeroSection = () => {
           </p>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary mb-6 leading-tight">
-            Consulta<br />Umidità
+            Consulenza Personalizzata<br />Contro Umidità
           </h1>
           
           <p className="text-primary text-lg md:text-xl mb-8 leading-relaxed">
-            Disponiamo di professionisti in tutta Italia per risolvere i vostri problemi di umidità e offrirvi una soluzione definitiva.
+            Disponiamo di professionisti sul territorio nazionale per rispondere ai tuoi problemi di umidità e offrirti una soluzione definitiva.
           </p>
           
           <Button 
             onClick={scrollToContact}
-            className="btn-glow bg-secondary text-white font-semibold px-8 py-6 text-lg rounded-full transition-all duration-300"
+            className="btn-glow bg-secondary text-white font-semibold px-8 py-4 text-lg rounded-md transition-all duration-300"
           >
-            Richiedi Informazioni Gratis
+            Richiedi informazioni
           </Button>
         </div>
       </div>
