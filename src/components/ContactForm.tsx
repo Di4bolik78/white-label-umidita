@@ -9,6 +9,7 @@ import { Loader2, CheckCircle, XCircle } from "lucide-react";
 const ContactForm = () => {
   const [step, setStep] = useState(1);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [privacyError, setPrivacyError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
@@ -64,9 +65,11 @@ const ContactForm = () => {
     e.preventDefault();
     
     if (!privacyAccepted) {
-      toast({ title: "Devi accettare l'informativa sulla privacy", variant: "destructive" });
+      setPrivacyError(true);
       return;
     }
+    
+    setPrivacyError(false);
 
     setIsLoading(true);
     setSubmitStatus('idle');
@@ -87,6 +90,7 @@ const ContactForm = () => {
   const resetForm = () => {
     setStep(1);
     setPrivacyAccepted(false);
+    setPrivacyError(false);
     setSubmitStatus('idle');
     setFormData({
       nome: "",
@@ -247,25 +251,33 @@ const ContactForm = () => {
                     </div>
 
                     {/* Privacy checkbox */}
-                    <div className="flex items-start space-x-3">
-                      <Checkbox 
-                        id="privacy" 
-                        checked={privacyAccepted}
-                        onCheckedChange={(checked) => setPrivacyAccepted(checked as boolean)}
-                        className="mt-1"
-                      />
-                      <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed">
-                        Ho letto l'informativa sulla{" "}
-                        <a 
-                          href="/privacy" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-secondary underline hover:text-secondary/80"
-                        >
-                          privacy
-                        </a>{" "}
-                        e do il consenso al trattamento dei miei dati*
-                      </label>
+                    <div className="space-y-2">
+                      <div className="flex items-start space-x-3">
+                        <Checkbox 
+                          id="privacy" 
+                          checked={privacyAccepted}
+                          onCheckedChange={(checked) => {
+                            setPrivacyAccepted(checked as boolean);
+                            if (checked) setPrivacyError(false);
+                          }}
+                          className="mt-1"
+                        />
+                        <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed">
+                          Ho letto l'informativa sulla{" "}
+                          <a 
+                            href="/privacy" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-secondary underline hover:text-secondary/80"
+                          >
+                            privacy
+                          </a>{" "}
+                          e do il consenso al trattamento dei miei dati<span className="text-destructive">*</span>
+                        </label>
+                      </div>
+                      {privacyError && (
+                        <p className="text-destructive text-sm ml-7">Devi accettare l'informativa sulla privacy</p>
+                      )}
                     </div>
                   </div>
                 )}
