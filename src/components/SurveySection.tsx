@@ -32,12 +32,13 @@ const SurveySection = () => {
     humidityType: "",
     ownerType: "",
     postalCode: "",
+    fullName: "",
     phone: "",
     contactTime: ""
   });
   const [completed, setCompleted] = useState(false);
 
-  const totalSteps = 7;
+  const totalSteps = 9;
   const progress = (step / totalSteps) * 100;
 
   const handleAnswer = (key: string, value: string | boolean) => {
@@ -69,8 +70,10 @@ const SurveySection = () => {
       case 2: return answers.humidityType !== "";
       case 3: return answers.ownerType !== "";
       case 4: return answers.postalCode.length >= 5;
-      case 5: return answers.phone.length >= 9;
-      case 6: return answers.contactTime !== "";
+      case 5: return answers.fullName.trim().length >= 3;
+      case 6: return answers.phone.length >= 9;
+      case 7: return answers.contactTime !== "";
+      case 8: return true; // Summary step
       default: return false;
     }
   };
@@ -195,6 +198,24 @@ const SurveySection = () => {
         return (
           <div className="space-y-6">
             <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
+              Come ti chiami?
+            </h3>
+            <div className="max-w-sm mx-auto">
+              <Input
+                type="text"
+                placeholder="Nome e Cognome"
+                value={answers.fullName}
+                onChange={(e) => handleAnswer("fullName", e.target.value)}
+                className="text-center text-lg py-6 bg-primary/10 border-primary/30 text-primary placeholder:text-primary/50"
+              />
+            </div>
+          </div>
+        );
+
+      case 6:
+        return (
+          <div className="space-y-6">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
               Qual è il tuo numero di telefono?
             </h3>
             <div className="max-w-xs mx-auto">
@@ -209,7 +230,7 @@ const SurveySection = () => {
           </div>
         );
 
-      case 6:
+      case 7:
         return (
           <div className="space-y-6">
             <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
@@ -225,6 +246,45 @@ const SurveySection = () => {
                   {time}
                 </Button>
               ))}
+            </div>
+          </div>
+        );
+
+      case 8:
+        return (
+          <div className="space-y-6 w-full max-w-lg mx-auto">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center mb-8">
+              Riepilogo
+            </h3>
+            <div className="bg-primary/5 rounded-xl p-6 space-y-4">
+              <div className="flex justify-between items-center py-2 border-b border-primary/10">
+                <span className="text-muted-foreground">Nome</span>
+                <span className="font-medium text-primary">{answers.fullName}</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-primary/10">
+                <span className="text-muted-foreground">Regione</span>
+                <span className="font-medium text-primary">{answers.region}</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-primary/10">
+                <span className="text-muted-foreground">Tipo di umidità</span>
+                <span className="font-medium text-primary text-right">{answers.humidityType}</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-primary/10">
+                <span className="text-muted-foreground">Tipologia</span>
+                <span className="font-medium text-primary capitalize">{answers.ownerType}</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-primary/10">
+                <span className="text-muted-foreground">CAP</span>
+                <span className="font-medium text-primary">{answers.postalCode}</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-primary/10">
+                <span className="text-muted-foreground">Telefono</span>
+                <span className="font-medium text-primary">{answers.phone}</span>
+              </div>
+              <div className="flex justify-between items-center py-2">
+                <span className="text-muted-foreground">Orario contatto</span>
+                <span className="font-medium text-primary text-right">{answers.contactTime}</span>
+              </div>
             </div>
           </div>
         );
