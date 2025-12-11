@@ -38,7 +38,7 @@ const SurveySection = () => {
   const [completed, setCompleted] = useState(false);
 
   const totalSteps = 7;
-  const progress = ((step + 1) / totalSteps) * 100;
+  const progress = (step / totalSteps) * 100;
 
   const handleAnswer = (key: string, value: string | boolean) => {
     setAnswers(prev => ({ ...prev, [key]: value }));
@@ -269,8 +269,13 @@ const SurveySection = () => {
   return (
     <section className="py-20 px-4 bg-primary">
       <div className="container mx-auto max-w-3xl">
+        {/* Question content */}
+        <div className="min-h-[300px] flex items-center justify-center">
+          {renderStep()}
+        </div>
+
         {/* Progress bar */}
-        <div className="mb-10">
+        <div className="mt-10 mb-6">
           <div className="flex justify-between text-sm text-primary-foreground/60 mb-2">
             <span>Domanda {step + 1} di {totalSteps}</span>
             <span>{Math.round(progress)}%</span>
@@ -278,26 +283,22 @@ const SurveySection = () => {
           <Progress value={progress} className="h-2 bg-primary-foreground/20" />
         </div>
 
-        {/* Question content */}
-        <div className="min-h-[300px] flex items-center justify-center">
-          {renderStep()}
-        </div>
-
         {/* Navigation */}
-        <div className="flex justify-between mt-10">
-          <Button
-            variant="ghost"
-            onClick={prevStep}
-            disabled={step === 0}
-            className="text-primary-foreground hover:bg-primary-foreground/10 disabled:opacity-30"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Indietro
-          </Button>
+        <div className={`flex ${step === 0 ? 'justify-end' : 'justify-between'}`}>
+          {step > 0 && (
+            <Button
+              variant="outline"
+              onClick={prevStep}
+              className="border-primary-foreground/40 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 px-8 py-5"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Indietro
+            </Button>
+          )}
           <Button
             onClick={nextStep}
             disabled={!canProceed()}
-            className="bg-secondary text-white hover:bg-secondary/90 disabled:opacity-50"
+            className="bg-secondary text-white hover:bg-secondary/80 disabled:opacity-50 px-8 py-5 font-semibold"
           >
             {step === totalSteps - 1 ? "Invia" : "Avanti"}
             {step < totalSteps - 1 && <ArrowRight className="w-4 h-4 ml-2" />}
