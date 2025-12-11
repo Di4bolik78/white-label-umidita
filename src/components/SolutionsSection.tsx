@@ -20,22 +20,21 @@ const SolutionsSection = () => {
             {/* Decorative stripes */}
             <div className="flex gap-1 mb-6">
               {[...Array(8)].map((_, i) => (
-                <div 
-                  key={i} 
-                  className="w-1 h-6 bg-secondary transform -skew-x-12"
-                />
+                <div key={i} className="w-1 h-6 bg-secondary transform -skew-x-12" />
               ))}
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-6 leading-tight">
-              Ti Aiutiamo Con<br />Soluzioni Definitive
+              Ti Aiutiamo a trovare
+              <br />
+              la giusta soluzione definitiva
             </h2>
 
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Disponiamo di professionisti in tutta Italia per risolvere i vostri problemi di umidità e offrirvi una soluzione definitiva.
+              I nostri tecnici risponderanno ai tuoi problemi di umidità per offrirti una soluzione definitiva.
             </p>
 
-            <Button 
+            <Button
               variant="outline"
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-5 rounded-full font-semibold transition-all duration-300 group"
             >
@@ -53,7 +52,7 @@ const SolutionsSection = () => {
 
             <ul className="space-y-4">
               {solutions.map((solution, index) => (
-                <li 
+                <li
                   key={index}
                   className="flex items-center gap-3 text-primary font-medium text-lg hover:text-secondary transition-colors cursor-pointer group"
                 >
