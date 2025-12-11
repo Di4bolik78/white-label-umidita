@@ -28,38 +28,40 @@ const faqs = [
 const FAQSection = () => {
   return (
     <section className="py-20 px-4 bg-muted">
-      <div className="container mx-auto max-w-4xl">
-        {/* Header with icon */}
-        <div className="flex flex-col items-start mb-12">
-          <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mb-6">
-            <HelpCircle className="w-8 h-8 text-secondary" />
+      <div className="container mx-auto flex justify-end">
+        <div className="w-full md:w-2/3 lg:w-1/2">
+          {/* Header with icon */}
+          <div className="flex flex-col items-end mb-12">
+            <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mb-6">
+              <HelpCircle className="w-8 h-8 text-secondary" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-right">
+              Domande Frequenti
+            </h2>
           </div>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-left">
-            Domande Frequenti
-          </h2>
-        </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
-              value={`item-${index}`}
-              className="border-none rounded-lg px-6 bg-background shadow-sm hover:shadow-lg transition-all duration-300 data-[state=open]:shadow-lg data-[state=open]:ring-2 data-[state=open]:ring-secondary/30"
-            >
-              <AccordionTrigger className="text-left text-lg font-semibold text-primary hover:text-secondary py-6 hover:no-underline">
-                <span className="flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-sm font-bold text-secondary flex-shrink-0">
-                    {index + 1}
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="border-none rounded-lg px-6 bg-background shadow-sm hover:shadow-lg transition-all duration-300 data-[state=open]:shadow-lg data-[state=open]:ring-2 data-[state=open]:ring-secondary/30"
+              >
+                <AccordionTrigger className="text-left text-lg font-semibold text-primary hover:text-secondary py-6 hover:no-underline">
+                  <span className="flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-sm font-bold text-secondary flex-shrink-0">
+                      {index + 1}
+                    </span>
+                    {faq.question}
                   </span>
-                  {faq.question}
-                </span>
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-11">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-11">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   );
