@@ -2,12 +2,12 @@ import { ChevronRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const solutions = [
-  "Risalita Capillare",
-  "Condensa",
-  "Infiltrazioni",
-  "Insetti dell'Umidità",
-  "Muffa sul Soffitto",
-  "Macchie di Umidità sulle Pareti",
+  "UMIDITÀ DI RISALITA",
+  "CONDENSA",
+  "INFILTRAZIONI LATERALI",
+  "MUFFA SULLE PARETI",
+  "MACCHIE DI UMIDITÀ",
+  "SALNITRO",
 ];
 
 const SolutionsSection = () => {
@@ -54,12 +54,10 @@ const SolutionsSection = () => {
               {solutions.map((solution, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-3 text-primary font-medium text-lg hover:text-secondary transition-colors cursor-pointer group"
+                  className="flex items-center gap-3 text-primary font-medium text-lg"
                 >
-                  <ChevronRight className="w-5 h-5 text-secondary group-hover:translate-x-1 transition-transform" />
-                  <span className="border-b-2 border-transparent group-hover:border-secondary transition-all">
-                    {solution.toUpperCase()}
-                  </span>
+                  <ChevronRight className="w-5 h-5 text-secondary" />
+                  <span>{solution}</span>
                 </li>
               ))}
             </ul>
