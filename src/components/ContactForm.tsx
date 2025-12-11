@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -9,7 +9,6 @@ import { Loader2, CheckCircle, XCircle } from "lucide-react";
 const ContactForm = () => {
   const [step, setStep] = useState(1);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
-  const [submitAttempted, setSubmitAttempted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
@@ -22,11 +21,6 @@ const ContactForm = () => {
     tipoUmidita: "",
     orarioContatto: "",
   });
-
-  // Reset submitAttempted on mount to ensure clean state
-  useEffect(() => {
-    setSubmitAttempted(false);
-  }, []);
 
   const handleChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -61,20 +55,18 @@ const ContactForm = () => {
         return;
       }
     }
-    setSubmitAttempted(false);
     setStep(prev => Math.min(prev + 1, 3));
   };
 
   const prevStep = () => {
-    setSubmitAttempted(false);
     setStep(prev => Math.max(prev - 1, 1));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitAttempted(true);
     
     if (!privacyAccepted) {
+      toast({ title: "Devi accettare l'informativa sulla privacy", variant: "destructive" });
       return;
     }
 
@@ -97,7 +89,6 @@ const ContactForm = () => {
   const resetForm = () => {
     setStep(1);
     setPrivacyAccepted(false);
-    setSubmitAttempted(false);
     setSubmitStatus('idle');
     setFormData({
       nome: "",
@@ -281,9 +272,6 @@ const ContactForm = () => {
                           e do il consenso al trattamento dei miei dati<span className="text-destructive">*</span>
                         </label>
                       </div>
-                      {submitAttempted && !privacyAccepted && (
-                        <p className="text-destructive text-sm ml-7">Devi accettare l'informativa sulla privacy</p>
-                      )}
                     </div>
                   </div>
                 )}
