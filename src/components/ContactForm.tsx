@@ -66,7 +66,6 @@ const ContactForm = () => {
     e.preventDefault();
     
     if (!privacyAccepted) {
-      toast({ title: "Devi accettare l'informativa sulla privacy", variant: "destructive" });
       return;
     }
 
