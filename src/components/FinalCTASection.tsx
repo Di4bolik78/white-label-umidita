@@ -17,7 +17,7 @@ const FinalCTASection = () => {
         <Button 
           onClick={scrollToContact}
           size="lg"
-          className="btn-glow bg-secondary text-white font-semibold px-10 py-7 text-lg rounded-full transition-all duration-300"
+          className="btn-glow bg-secondary text-white font-semibold px-10 py-7 text-lg transition-all duration-300"
         >
           Richiedi Consulenza Gratuita
         </Button>
