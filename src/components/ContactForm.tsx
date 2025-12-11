@@ -102,10 +102,10 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contatto" className="py-16 px-4 bg-background">
+    <section id="contatto" className="py-10 md:py-16 px-4 bg-background">
       <div className="container mx-auto max-w-4xl">
-        <div className="bg-card rounded-xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-          <h2 className="text-2xl md:text-3xl font-heading font-semibold text-primary mb-8">
+        <div className="bg-card rounded-xl p-5 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-heading font-semibold text-primary mb-6 md:mb-8">
             Ricevi informazioni gratis e senza impegno
           </h2>
 
@@ -144,10 +144,10 @@ const ContactForm = () => {
           {submitStatus === 'idle' && (
             <>
               {/* Progress indicator */}
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-6 md:mb-8">
                 {[1, 2, 3].map((num, index) => (
                   <div key={num} className="flex items-center" style={{ flex: index < 2 ? 1 : 'none' }}>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center font-semibold text-sm transition-all duration-300 ${
+                    <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center font-semibold text-xs sm:text-sm transition-all duration-300 ${
                       step >= num 
                         ? "bg-secondary text-secondary-foreground" 
                         : "bg-muted text-muted-foreground"
@@ -155,7 +155,7 @@ const ContactForm = () => {
                       {num}
                     </div>
                     {num < 3 && (
-                      <div className={`flex-1 h-0.5 mx-4 transition-all duration-300 ${
+                      <div className={`flex-1 h-0.5 mx-2 sm:mx-4 transition-all duration-300 ${
                         step > num ? "bg-secondary" : "bg-muted"
                       }`} />
                     )}
@@ -276,13 +276,13 @@ const ContactForm = () => {
                 )}
 
                 {/* Navigation buttons */}
-                <div className="flex gap-4 justify-end">
+                <div className="flex flex-col-reverse sm:flex-row gap-3 sm:gap-4 sm:justify-end">
                   {step > 1 && (
                     <Button 
                       type="button" 
                       variant="outline" 
                       onClick={prevStep}
-                      className="px-8 h-12"
+                      className="px-6 sm:px-8 h-12 w-full sm:w-auto"
                       disabled={isLoading}
                     >
                       Indietro
@@ -292,14 +292,14 @@ const ContactForm = () => {
                     <Button 
                       type="button" 
                       onClick={nextStep}
-                      className="btn-glow bg-secondary text-white px-8 h-12 font-semibold"
+                      className="btn-glow bg-secondary text-white px-6 sm:px-8 h-12 font-semibold w-full sm:w-auto"
                     >
                       Avanti
                     </Button>
                   ) : (
                     <Button 
                       type="submit"
-                      className="btn-glow bg-secondary text-white px-8 h-12 font-semibold"
+                      className="btn-glow bg-secondary text-white px-6 sm:px-8 h-12 font-semibold w-full sm:w-auto"
                       disabled={isLoading}
                     >
                       {isLoading ? (

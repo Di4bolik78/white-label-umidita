@@ -36,17 +36,17 @@ const CTASection = () => {
           </div>
 
           {/* Right side */}
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full lg:w-auto">
             <Input
               type="tel"
               placeholder="Lascia il tuo telefono, ti richiamiamo."
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="h-12 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 min-w-[280px]"
+              className="h-12 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 w-full sm:min-w-[280px]"
             />
             <Button 
               type="submit"
-              className="btn-glow bg-secondary text-white font-semibold px-8 py-6 transition-all duration-300"
+              className="btn-glow bg-secondary text-white font-semibold px-6 sm:px-8 py-5 sm:py-6 transition-all duration-300 w-full sm:w-auto"
             >
               CHIAMAMI
               <ChevronRight className="w-4 h-4 ml-1" />

@@ -28,7 +28,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <span className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground">
+            <span className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-primary-foreground">
               Consulta<span className="text-secondary">Umidità</span>
             </span>
           </a>
@@ -36,7 +36,7 @@ const Header = () => {
           {/* CTA Button */}
           <Button 
             onClick={scrollToContact}
-            className="btn-glow bg-secondary text-white font-semibold px-8 py-3 shadow-lg transition-all duration-300"
+            className="btn-glow bg-secondary text-white font-semibold px-4 sm:px-6 md:px-8 py-2 sm:py-3 text-sm sm:text-base shadow-lg transition-all duration-300"
           >
             Contattaci
           </Button>
