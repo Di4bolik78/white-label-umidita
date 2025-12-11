@@ -5,7 +5,7 @@ import SolutionsSection from "@/components/SolutionsSection";
 import CTASection from "@/components/CTASection";
 import HumidityTypesSection from "@/components/HumidityTypesSection";
 import FAQSection from "@/components/FAQSection";
-import FinalCTASection from "@/components/FinalCTASection";
+import SurveySection from "@/components/SurveySection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -18,7 +18,7 @@ const Index = () => {
       <CTASection />
       <HumidityTypesSection />
       <FAQSection />
-      <FinalCTASection />
+      <SurveySection />
       <Footer />
     </main>
   );
