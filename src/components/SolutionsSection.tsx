@@ -54,10 +54,12 @@ const SolutionsSection = () => {
               {solutions.map((solution, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-3 text-primary font-medium text-lg"
+                  className="flex items-center gap-3 text-primary font-medium text-lg group cursor-pointer"
                 >
-                  <ChevronRight className="w-5 h-5 text-secondary" />
-                  <span>{solution}</span>
+                  <ChevronRight className="w-5 h-5 text-secondary group-hover:text-aqua transition-colors duration-300" />
+                  <span className="relative group-hover:text-aqua transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-left after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+                    {solution}
+                  </span>
                 </li>
               ))}
             </ul>
