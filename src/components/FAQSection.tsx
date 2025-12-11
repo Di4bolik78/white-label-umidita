@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import DecorativeStripes from "@/components/DecorativeStripes";
 
 const faqs = [
   {
@@ -32,15 +33,7 @@ const FAQSection = () => {
           {/* Header with decorative stripes */}
           <div className="flex flex-col items-start mb-8 md:mb-12 animate-fade-in-up">
             {/* Decorative stripes */}
-            <div className="flex gap-1 mb-4">
-              {[...Array(8)].map((_, i) => (
-                <div 
-                  key={i} 
-                  className="w-1 h-5 md:h-6 bg-secondary transform -skew-x-12 stripe-animate origin-bottom"
-                  style={{ animationDelay: `${i * 0.08}s` }}
-                />
-              ))}
-            </div>
+            <DecorativeStripes className="mb-4" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-primary text-left">
               Domande Frequenti
             </h2>

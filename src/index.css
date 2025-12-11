@@ -113,16 +113,32 @@ All colors MUST be HSL.
 
 @layer components {
   .btn-glow {
-    @apply transition-all duration-300 ease-out;
+    @apply transition-all duration-300 ease-out relative overflow-hidden;
+  }
+  
+  .btn-glow::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--aqua-light) / 0.2) 0%,
+      transparent 50%,
+      hsl(var(--aqua) / 0.1) 100%
+    );
+  }
+  
+  .btn-glow:hover::before {
+    @apply opacity-100;
   }
   
   .btn-glow:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px hsl(var(--aqua) / 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px hsl(var(--aqua) / 0.25);
   }
 
   .btn-glow:active {
     transform: translateY(0);
+    box-shadow: 0 2px 8px hsl(var(--aqua) / 0.2);
   }
 
   /* Fade in up animation */
