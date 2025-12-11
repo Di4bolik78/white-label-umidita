@@ -30,11 +30,11 @@ const FAQSection = () => {
     <section className="py-20 px-4 bg-muted">
       <div className="container mx-auto max-w-4xl">
         {/* Header with icon */}
-        <div className="flex flex-col items-center mb-12">
+        <div className="flex flex-col items-start mb-12">
           <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mb-6">
             <HelpCircle className="w-8 h-8 text-secondary" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-left">
             Domande Frequenti
           </h2>
         </div>
