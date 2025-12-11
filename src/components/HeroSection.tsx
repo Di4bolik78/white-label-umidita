@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
 
       {/* White transparent container - full height, half width, left aligned */}
-      <div className="relative z-10 w-full md:w-1/2 bg-white/60 md:bg-white/50 backdrop-blur-sm flex items-center">
+      <div className="relative z-10 w-full md:w-[45%] bg-white/60 md:bg-white/50 backdrop-blur-sm flex items-center">
         <div className="p-6 pt-24 md:p-12 md:pt-28 lg:p-16 lg:pt-32 w-full">
           {/* Decorative stripes */}
           <div className="flex gap-1 mb-4 md:mb-6">
