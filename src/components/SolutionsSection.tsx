@@ -12,31 +12,35 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-16 md:py-20 px-4 bg-background">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left column */}
-          <div>
+          <div className="animate-fade-in-up">
             {/* Decorative stripes */}
             <div className="flex gap-1 mb-6">
               {[...Array(8)].map((_, i) => (
-                <div key={i} className="w-1 h-6 bg-secondary transform -skew-x-12" />
+                <div 
+                  key={i} 
+                  className="w-1 h-5 md:h-6 bg-secondary transform -skew-x-12 stripe-animate origin-bottom"
+                  style={{ animationDelay: `${i * 0.08}s` }}
+                />
               ))}
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4 md:mb-6 leading-tight">
               Ti Aiutiamo a trovare
               <br />
               la giusta soluzione definitiva
             </h2>
 
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
               I nostri tecnici risponderanno ai tuoi problemi di umidità per offrirti una soluzione definitiva.
             </p>
 
             <Button
               variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-5 font-semibold transition-all duration-300 group"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-5 font-semibold transition-all duration-300 group hover-lift w-full sm:w-auto"
             >
               <Phone className="w-4 h-4 mr-2" />
               800 123 456
@@ -45,19 +49,19 @@ const SolutionsSection = () => {
           </div>
 
           {/* Right column */}
-          <div>
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-8 uppercase tracking-wide">
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-primary mb-6 md:mb-8 uppercase tracking-wide">
               Soluzioni ai Problemi di Umidità
             </h3>
 
-            <ul className="space-y-4">
+            <ul className="space-y-3 md:space-y-4">
               {solutions.map((solution, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-3 text-primary font-medium text-lg group"
+                  className="flex items-center gap-3 text-primary font-medium text-base md:text-lg group"
                 >
-                  <ChevronRight className="w-5 h-5 text-secondary group-hover:text-aqua transition-colors duration-300" />
-                  <span className="relative group-hover:text-aqua transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-left after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+                  <ChevronRight className="w-5 h-5 text-secondary flex-shrink-0 group-hover:text-aqua group-hover:translate-x-1 transition-all duration-300" />
+                  <span className="relative group-hover:text-secondary transition-colors duration-300">
                     {solution}
                   </span>
                 </li>

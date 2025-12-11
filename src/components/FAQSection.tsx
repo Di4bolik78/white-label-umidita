@@ -26,41 +26,43 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="py-20 px-4 bg-muted">
+    <section className="py-16 md:py-20 px-4 bg-muted">
       <div className="container mx-auto flex justify-start">
-        <div className="w-full md:w-4/5 lg:w-3/4">
+        <div className="w-full lg:w-4/5 xl:w-3/4">
           {/* Header with decorative stripes */}
-          <div className="flex flex-col items-start mb-12">
+          <div className="flex flex-col items-start mb-8 md:mb-12 animate-fade-in-up">
             {/* Decorative stripes */}
             <div className="flex gap-1 mb-4">
               {[...Array(8)].map((_, i) => (
                 <div 
                   key={i} 
-                  className="w-1 h-5 md:h-6 bg-secondary transform -skew-x-12"
+                  className="w-1 h-5 md:h-6 bg-secondary transform -skew-x-12 stripe-animate origin-bottom"
+                  style={{ animationDelay: `${i * 0.08}s` }}
                 />
               ))}
             </div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-primary text-left">
               Domande Frequenti
             </h2>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border-none rounded-lg px-6 md:px-8 bg-background shadow-sm hover:shadow-lg transition-all duration-300 data-[state=open]:shadow-lg data-[state=open]:ring-2 data-[state=open]:ring-secondary/30"
+                className="border-none rounded-lg px-4 sm:px-6 md:px-8 bg-background shadow-sm hover:shadow-lg transition-all duration-300 data-[state=open]:shadow-lg data-[state=open]:ring-2 data-[state=open]:ring-secondary/30 animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-primary hover:text-secondary py-6 hover:no-underline">
-                  <span className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-sm font-bold text-secondary flex-shrink-0">
+                <AccordionTrigger className="text-left text-base sm:text-lg md:text-xl font-semibold text-primary hover:text-secondary py-4 md:py-6 hover:no-underline">
+                  <span className="flex items-center gap-2 sm:gap-3">
+                    <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-secondary/10 flex items-center justify-center text-xs sm:text-sm font-bold text-secondary flex-shrink-0">
                       {index + 1}
                     </span>
-                    {faq.question}
+                    <span className="pr-2">{faq.question}</span>
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-11 text-base md:text-lg">
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-4 md:pb-6 pl-9 sm:pl-10 md:pl-11 text-sm sm:text-base md:text-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

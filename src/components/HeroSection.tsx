@@ -7,7 +7,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[85vh] md:min-h-[95vh] flex overflow-hidden">
+    <section className="relative min-h-[90vh] md:min-h-screen flex overflow-hidden">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center md:bg-center bg-no-repeat"
@@ -19,14 +19,14 @@ const HeroSection = () => {
 
       {/* White transparent container - full height, half width, left aligned */}
       <div className="relative z-10 w-full md:w-[45%] bg-white/60 md:bg-white/50 backdrop-blur-sm flex items-center">
-        <div className="p-6 pt-24 md:p-12 md:pt-28 lg:p-16 lg:pt-32 w-full">
+        <div className="p-6 pt-24 md:p-12 md:pt-28 lg:p-16 lg:pt-32 w-full stagger-children">
           {/* Decorative stripes */}
           <div className="flex gap-1 mb-4 md:mb-6">
             {[...Array(8)].map((_, i) => (
               <div 
                 key={i} 
-                className="w-1 h-5 md:h-6 bg-secondary transform -skew-x-12"
-                style={{ animationDelay: `${i * 0.1}s` }}
+                className="w-1 h-5 md:h-6 bg-secondary transform -skew-x-12 stripe-animate origin-bottom"
+                style={{ animationDelay: `${i * 0.08}s` }}
               />
             ))}
           </div>

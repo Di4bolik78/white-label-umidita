@@ -22,15 +22,15 @@ const CTASection = () => {
 
 
   return (
-    <section className="py-16 px-4 bg-primary">
+    <section className="py-12 md:py-16 px-4 bg-primary">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8">
           {/* Left side */}
-          <div>
-            <p className="text-primary-foreground/80 text-lg mb-2">
+          <div className="text-center lg:text-left">
+            <p className="text-primary-foreground/80 text-base md:text-lg mb-2">
               Specialisti in Soluzioni contro l'Umidità
             </p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground uppercase tracking-wide">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-primary-foreground uppercase tracking-wide">
               Richiedi Informazioni
             </h2>
           </div>
