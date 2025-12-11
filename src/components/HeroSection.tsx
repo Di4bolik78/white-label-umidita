@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import DecorativeStripes from "@/components/DecorativeStripes";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -21,15 +22,7 @@ const HeroSection = () => {
       <div className="relative z-10 w-full md:w-[45%] bg-white/60 md:bg-white/50 backdrop-blur-sm flex items-center">
         <div className="p-6 pt-24 md:p-12 md:pt-28 lg:p-16 lg:pt-32 w-full stagger-children">
           {/* Decorative stripes */}
-          <div className="flex gap-1 mb-4 md:mb-6">
-            {[...Array(8)].map((_, i) => (
-              <div 
-                key={i} 
-                className="w-1 h-5 md:h-6 bg-secondary transform -skew-x-12 stripe-animate origin-bottom"
-                style={{ animationDelay: `${i * 0.08}s` }}
-              />
-            ))}
-          </div>
+          <DecorativeStripes className="mb-4 md:mb-6" />
 
           <p className="text-primary font-medium text-base md:text-lg mb-3 md:mb-4 tracking-wide">
             Specialisti in Soluzioni contro l'Umidità
