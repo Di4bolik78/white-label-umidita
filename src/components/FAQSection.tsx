@@ -35,10 +35,10 @@ const FAQSection = () => {
             <HelpCircle className="w-8 h-8 text-secondary" />
           </div>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center">
-            FAQ
+            Domande Frequenti
           </h2>
           <p className="text-muted-foreground text-lg mt-2">
-            Domande frequenti sull'umidità
+            FAQ
           </p>
         </div>
 
