@@ -20,9 +20,6 @@ const CTASection = () => {
     setPhone("");
   };
 
-  const scrollToContact = () => {
-    document.getElementById('contatto')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-16 px-4 bg-primary">
@@ -39,32 +36,22 @@ const CTASection = () => {
           </div>
 
           {/* Right side */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+            <Input
+              type="tel"
+              placeholder="Lascia il tuo telefono, ti richiamiamo."
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="h-12 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 min-w-[280px]"
+            />
             <Button 
-              onClick={scrollToContact}
+              type="submit"
               className="btn-glow bg-secondary text-white font-semibold px-8 py-6 rounded-full transition-all duration-300"
             >
-              Richiedi Informazioni
+              CHIAMAMI
+              <ChevronRight className="w-4 h-4 ml-1" />
             </Button>
-
-            <form onSubmit={handleSubmit} className="flex gap-2 w-full sm:w-auto">
-              <Input
-                type="tel"
-                placeholder="Lascia il tuo telefono, ti richiamiamo."
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="h-12 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/60 min-w-[280px]"
-              />
-              <Button 
-                type="submit"
-                variant="outline"
-                className="h-12 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-semibold px-6 whitespace-nowrap"
-              >
-                CHIAMAMI
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
     </section>
