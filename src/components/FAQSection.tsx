@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -29,11 +28,17 @@ const FAQSection = () => {
   return (
     <section className="py-20 px-4 bg-muted">
       <div className="container mx-auto flex justify-start">
-        <div className="w-full md:w-3/4 lg:w-2/3">
-          {/* Header with icon */}
+        <div className="w-full md:w-4/5 lg:w-3/4">
+          {/* Header with decorative stripes */}
           <div className="flex flex-col items-start mb-12">
-            <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mb-6">
-              <HelpCircle className="w-8 h-8 text-secondary" />
+            {/* Decorative stripes */}
+            <div className="flex gap-1 mb-4">
+              {[...Array(8)].map((_, i) => (
+                <div 
+                  key={i} 
+                  className="w-1 h-5 md:h-6 bg-secondary transform -skew-x-12"
+                />
+              ))}
             </div>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-left">
               Domande Frequenti
@@ -45,9 +50,9 @@ const FAQSection = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border-none rounded-lg px-6 bg-background shadow-sm hover:shadow-lg transition-all duration-300 data-[state=open]:shadow-lg data-[state=open]:ring-2 data-[state=open]:ring-secondary/30"
+                className="border-none rounded-lg px-6 md:px-8 bg-background shadow-sm hover:shadow-lg transition-all duration-300 data-[state=open]:shadow-lg data-[state=open]:ring-2 data-[state=open]:ring-secondary/30"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold text-primary hover:text-secondary py-6 hover:no-underline">
+                <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-primary hover:text-secondary py-6 hover:no-underline">
                   <span className="flex items-center gap-3">
                     <span className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-sm font-bold text-secondary flex-shrink-0">
                       {index + 1}
@@ -55,7 +60,7 @@ const FAQSection = () => {
                     {faq.question}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-11">
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-11 text-base md:text-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
