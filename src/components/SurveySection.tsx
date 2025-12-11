@@ -80,7 +80,7 @@ const SurveySection = () => {
       case 0:
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground text-center">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
               Hai problemi di umidità in casa?
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -96,7 +96,7 @@ const SurveySection = () => {
               </Button>
               <Button
                 size="lg"
-                className="px-12 py-6 text-lg bg-secondary/20 border-secondary/50 text-primary-foreground hover:bg-secondary/30"
+                className="px-12 py-6 text-lg bg-primary/10 border-primary/30 text-primary hover:bg-primary/20"
                 onClick={() => {
                   handleAnswer("hasIssue", false);
                   setCompleted(true);
@@ -111,15 +111,14 @@ const SurveySection = () => {
       case 1:
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground text-center">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
               In quale regione ti trovi?
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-2xl mx-auto">
               {regions.map((region) => (
                 <Button
                   key={region}
-                  variant={answers.region === region ? "default" : "outline"}
-                  className={`py-4 ${answers.region === region ? "bg-secondary text-white" : "border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"}`}
+                  className={`py-4 ${answers.region === region ? "bg-secondary text-white hover:bg-secondary/80" : "bg-primary/10 border-primary/30 text-primary hover:bg-primary/20"}`}
                   onClick={() => handleAnswer("region", region)}
                 >
                   {region}
@@ -132,15 +131,14 @@ const SurveySection = () => {
       case 2:
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground text-center">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
               Che tipo di umidità hai?
             </h3>
             <div className="flex flex-col gap-3 max-w-md mx-auto">
               {humidityTypes.map((type) => (
                 <Button
                   key={type}
-                  variant={answers.humidityType === type ? "default" : "outline"}
-                  className={`py-4 ${answers.humidityType === type ? "bg-secondary text-white" : "border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"}`}
+                  className={`py-4 ${answers.humidityType === type ? "bg-secondary text-white hover:bg-secondary/80" : "bg-primary/10 border-primary/30 text-primary hover:bg-primary/20"}`}
                   onClick={() => handleAnswer("humidityType", type)}
                 >
                   {type}
@@ -153,22 +151,20 @@ const SurveySection = () => {
       case 3:
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground text-center">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
               Sei inquilino o proprietario?
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                variant={answers.ownerType === "proprietario" ? "default" : "outline"}
-                className={`px-12 py-6 text-lg ${answers.ownerType === "proprietario" ? "bg-secondary text-white" : "border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"}`}
+                className={`px-12 py-6 text-lg ${answers.ownerType === "proprietario" ? "bg-secondary text-white hover:bg-secondary/80" : "bg-primary/10 border-primary/30 text-primary hover:bg-primary/20"}`}
                 onClick={() => handleAnswer("ownerType", "proprietario")}
               >
                 Proprietario
               </Button>
               <Button
                 size="lg"
-                variant={answers.ownerType === "inquilino" ? "default" : "outline"}
-                className={`px-12 py-6 text-lg ${answers.ownerType === "inquilino" ? "bg-secondary text-white" : "border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"}`}
+                className={`px-12 py-6 text-lg ${answers.ownerType === "inquilino" ? "bg-secondary text-white hover:bg-secondary/80" : "bg-primary/10 border-primary/30 text-primary hover:bg-primary/20"}`}
                 onClick={() => handleAnswer("ownerType", "inquilino")}
               >
                 Inquilino
@@ -180,7 +176,7 @@ const SurveySection = () => {
       case 4:
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground text-center">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
               Qual è il tuo codice postale?
             </h3>
             <div className="max-w-xs mx-auto">
@@ -189,7 +185,7 @@ const SurveySection = () => {
                 placeholder="Es. 20121"
                 value={answers.postalCode}
                 onChange={(e) => handleAnswer("postalCode", e.target.value.replace(/\D/g, "").slice(0, 5))}
-                className="text-center text-lg py-6 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/50"
+                className="text-center text-lg py-6 bg-primary/10 border-primary/30 text-primary placeholder:text-primary/50"
               />
             </div>
           </div>
@@ -198,7 +194,7 @@ const SurveySection = () => {
       case 5:
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground text-center">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
               Qual è il tuo numero di telefono?
             </h3>
             <div className="max-w-xs mx-auto">
@@ -207,7 +203,7 @@ const SurveySection = () => {
                 placeholder="Es. 333 1234567"
                 value={answers.phone}
                 onChange={(e) => handleAnswer("phone", e.target.value.replace(/[^\d\s]/g, ""))}
-                className="text-center text-lg py-6 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/50"
+                className="text-center text-lg py-6 bg-primary/10 border-primary/30 text-primary placeholder:text-primary/50"
               />
             </div>
           </div>
@@ -216,15 +212,14 @@ const SurveySection = () => {
       case 6:
         return (
           <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground text-center">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary text-center">
               Quando preferisci essere contattato?
             </h3>
             <div className="flex flex-col gap-3 max-w-md mx-auto">
               {contactTimes.map((time) => (
                 <Button
                   key={time}
-                  variant={answers.contactTime === time ? "default" : "outline"}
-                  className={`py-4 ${answers.contactTime === time ? "bg-secondary text-white" : "border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"}`}
+                  className={`py-4 ${answers.contactTime === time ? "bg-secondary text-white hover:bg-secondary/80" : "bg-primary/10 border-primary/30 text-primary hover:bg-primary/20"}`}
                   onClick={() => handleAnswer("contactTime", time)}
                 >
                   {time}
@@ -241,26 +236,26 @@ const SurveySection = () => {
 
   if (completed) {
     return (
-      <section className="py-20 px-4 bg-primary">
+      <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-2xl text-center">
           <div className="w-20 h-20 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-secondary" />
           </div>
           {answers.hasIssue === false ? (
             <>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
                 Grazie per la risposta!
               </h2>
-              <p className="text-primary-foreground/80 text-lg">
+              <p className="text-muted-foreground text-lg">
                 Se in futuro dovessi avere problemi di umidità, saremo qui per aiutarti.
               </p>
             </>
           ) : (
             <>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
                 Grazie per aver completato il sondaggio!
               </h2>
-              <p className="text-primary-foreground/80 text-lg">
+              <p className="text-muted-foreground text-lg">
                 Un nostro esperto ti contatterà al più presto per offrirti la migliore soluzione.
               </p>
             </>
@@ -271,7 +266,7 @@ const SurveySection = () => {
   }
 
   return (
-    <section className="py-20 px-4 bg-primary">
+    <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-3xl">
         {/* Question content */}
         <div className="min-h-[300px] flex items-center justify-center">
@@ -281,11 +276,11 @@ const SurveySection = () => {
         {/* Progress bar - only after first question */}
         {step > 0 && (
           <div className="mt-10 mb-6">
-            <div className="flex justify-between text-sm text-primary-foreground/60 mb-2">
+            <div className="flex justify-between text-sm text-muted-foreground mb-2">
               <span>Domanda {step + 1} di {totalSteps}</span>
               <span>{Math.round(progress)}%</span>
             </div>
-            <Progress value={progress} className="h-2 bg-primary-foreground/20" />
+            <Progress value={progress} className="h-2 bg-primary/20" />
           </div>
         )}
 
@@ -295,7 +290,7 @@ const SurveySection = () => {
             <Button
               variant="outline"
               onClick={prevStep}
-              className="border-secondary/50 text-primary-foreground bg-secondary/20 hover:bg-secondary/30 px-8 py-5"
+              className="border-primary/30 text-primary bg-primary/10 hover:bg-primary/20 px-8 py-5"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Indietro
