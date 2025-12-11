@@ -28,14 +28,14 @@ const faqs = [
 const FAQSection = () => {
   return (
     <section className="py-20 px-4 bg-muted">
-      <div className="container mx-auto flex justify-end">
-        <div className="w-full md:w-2/3 lg:w-1/2">
+      <div className="container mx-auto flex justify-start">
+        <div className="w-full md:w-3/4 lg:w-2/3">
           {/* Header with icon */}
-          <div className="flex flex-col items-end mb-12">
+          <div className="flex flex-col items-start mb-12">
             <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mb-6">
               <HelpCircle className="w-8 h-8 text-secondary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-right">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-left">
               Domande Frequenti
             </h2>
           </div>
