@@ -34,9 +34,6 @@ const FAQSection = () => {
           <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mb-6">
             <HelpCircle className="w-8 h-8 text-secondary" />
           </div>
-          <p className="text-muted-foreground text-lg mb-2">
-            FAQ
-          </p>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary text-center">
             Domande Frequenti
           </h2>
