@@ -36,7 +36,7 @@ const SolutionsSection = () => {
 
             <Button
               variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-5 rounded-full font-semibold transition-all duration-300 group"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-5 font-semibold transition-all duration-300 group"
             >
               <Phone className="w-4 h-4 mr-2" />
               800 123 456

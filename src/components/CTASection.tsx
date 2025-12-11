@@ -46,7 +46,7 @@ const CTASection = () => {
             />
             <Button 
               type="submit"
-              className="btn-glow bg-secondary text-white font-semibold px-8 py-6 rounded-full transition-all duration-300"
+              className="btn-glow bg-secondary text-white font-semibold px-8 py-6 transition-all duration-300"
             >
               CHIAMAMI
               <ChevronRight className="w-4 h-4 ml-1" />
