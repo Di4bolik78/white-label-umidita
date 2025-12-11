@@ -23,14 +23,34 @@ const ContactForm = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
+  const isValidEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const isValidPhone = (phone: string) => {
+    return /^[0-9]{6,15}$/.test(phone.replace(/\s/g, ''));
+  };
+
   const nextStep = () => {
-    if (step === 1 && (!formData.nome || !formData.cognome || !formData.email)) {
-      toast({ title: "Compila tutti i campi", variant: "destructive" });
-      return;
+    if (step === 1) {
+      if (!formData.nome || !formData.cognome || !formData.email) {
+        toast({ title: "Compila tutti i campi", variant: "destructive" });
+        return;
+      }
+      if (!isValidEmail(formData.email)) {
+        toast({ title: "Inserisci un'email valida", variant: "destructive" });
+        return;
+      }
     }
-    if (step === 2 && (!formData.cap || !formData.telefono)) {
-      toast({ title: "Compila tutti i campi", variant: "destructive" });
-      return;
+    if (step === 2) {
+      if (!formData.cap || !formData.telefono) {
+        toast({ title: "Compila tutti i campi", variant: "destructive" });
+        return;
+      }
+      if (!isValidPhone(formData.telefono)) {
+        toast({ title: "Inserisci un numero di telefono valido", variant: "destructive" });
+        return;
+      }
     }
     setStep(prev => Math.min(prev + 1, 3));
   };
@@ -52,15 +72,15 @@ const ContactForm = () => {
   return (
     <section id="contatto" className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-4xl">
-        <div className="bg-card rounded-xl p-8 shadow-xl">
+        <div className="bg-card rounded-xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
           <h2 className="text-2xl md:text-3xl font-heading font-semibold text-primary mb-8">
             Ricevi informazioni gratis e senza impegno
           </h2>
 
           {/* Progress indicator */}
-          <div className="flex items-center justify-between mb-8 max-w-full">
-            {[1, 2, 3].map((num) => (
-              <div key={num} className="flex items-center flex-1">
+          <div className="flex items-center justify-between mb-8">
+            {[1, 2, 3].map((num, index) => (
+              <div key={num} className="flex items-center" style={{ flex: index < 2 ? 1 : 'none' }}>
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center font-semibold text-sm transition-all duration-300 ${
                   step >= num 
                     ? "bg-secondary text-secondary-foreground" 
