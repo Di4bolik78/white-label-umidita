@@ -7,8 +7,8 @@ const Footer = () => {
             <span className="text-2xl font-heading font-bold text-primary-foreground">
               Consulta<span className="text-secondary">Umidità</span>
             </span>
-            <span className="text-primary-foreground/80 text-sm">
-              Tel: +39 02 1234567
+            <span className="text-primary-foreground/90 text-base font-medium">
+              800 123 456
             </span>
           </div>
           
