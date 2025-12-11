@@ -7,7 +7,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden pt-16 md:pt-12">
+    <section className="relative min-h-[70vh] md:min-h-[80vh] flex overflow-hidden">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center md:bg-center bg-no-repeat"
@@ -17,9 +17,9 @@ const HeroSection = () => {
       {/* Dark overlay for better readability */}
       <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
 
-      <div className="container mx-auto px-4 py-8 md:py-16 relative z-10 flex justify-center md:justify-start h-full">
-        {/* White transparent container - occupies half the hero section */}
-        <div className="bg-white/60 md:bg-white/50 backdrop-blur-sm rounded-2xl p-6 md:p-12 shadow-2xl w-full md:w-1/2 flex flex-col justify-center">
+      {/* White transparent container - full height, half width, left aligned */}
+      <div className="relative z-10 w-full md:w-1/2 bg-white/60 md:bg-white/50 backdrop-blur-sm flex items-center">
+        <div className="p-6 md:p-12 lg:p-16 w-full">
           {/* Decorative stripes */}
           <div className="flex gap-1 mb-4 md:mb-6">
             {[...Array(8)].map((_, i) => (
