@@ -60,7 +60,10 @@ const ContactForm = () => {
     setStep(prev => Math.min(prev + 1, 3));
   };
 
-  const prevStep = () => setStep(prev => Math.max(prev - 1, 1));
+  const prevStep = () => {
+    setPrivacyError(false);
+    setStep(prev => Math.max(prev - 1, 1));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
