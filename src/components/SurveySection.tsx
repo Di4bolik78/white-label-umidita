@@ -304,10 +304,10 @@ const SurveySection = () => {
           {answers.hasIssue === false ? (
             <>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-                Grazie per la risposta!
+                Grazie per il tuo interesse!
               </h2>
               <p className="text-muted-foreground text-lg">
-                Se in futuro dovessi avere problemi di umidità, saremo qui per aiutarti.
+                Purtroppo, al momento offriamo solo servizi relativi all'umidità. Speriamo di poterti aiutare in futuro!
               </p>
             </>
           ) : (
