@@ -86,17 +86,21 @@ const SurveySection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                variant={answers.hasIssue === true ? "default" : "outline"}
-                className={`px-12 py-6 text-lg ${answers.hasIssue === true ? "bg-secondary text-white" : "border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"}`}
-                onClick={() => handleAnswer("hasIssue", true)}
+                className="px-12 py-6 text-lg bg-secondary text-white hover:bg-secondary/80"
+                onClick={() => {
+                  handleAnswer("hasIssue", true);
+                  setStep(1);
+                }}
               >
                 Sì
               </Button>
               <Button
                 size="lg"
-                variant={answers.hasIssue === false ? "default" : "outline"}
-                className={`px-12 py-6 text-lg ${answers.hasIssue === false ? "bg-secondary text-white" : "border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"}`}
-                onClick={() => handleAnswer("hasIssue", false)}
+                className="px-12 py-6 text-lg bg-secondary/20 border-secondary/50 text-primary-foreground hover:bg-secondary/30"
+                onClick={() => {
+                  handleAnswer("hasIssue", false);
+                  setCompleted(true);
+                }}
               >
                 No
               </Button>
@@ -274,36 +278,38 @@ const SurveySection = () => {
           {renderStep()}
         </div>
 
-        {/* Progress bar */}
-        <div className="mt-10 mb-6">
-          <div className="flex justify-between text-sm text-primary-foreground/60 mb-2">
-            <span>Domanda {step + 1} di {totalSteps}</span>
-            <span>{Math.round(progress)}%</span>
+        {/* Progress bar - only after first question */}
+        {step > 0 && (
+          <div className="mt-10 mb-6">
+            <div className="flex justify-between text-sm text-primary-foreground/60 mb-2">
+              <span>Domanda {step + 1} di {totalSteps}</span>
+              <span>{Math.round(progress)}%</span>
+            </div>
+            <Progress value={progress} className="h-2 bg-primary-foreground/20" />
           </div>
-          <Progress value={progress} className="h-2 bg-primary-foreground/20" />
-        </div>
+        )}
 
-        {/* Navigation */}
-        <div className={`flex ${step === 0 ? 'justify-end' : 'justify-between'}`}>
-          {step > 0 && (
+        {/* Navigation - only after first question */}
+        {step > 0 && (
+          <div className="flex justify-between">
             <Button
               variant="outline"
               onClick={prevStep}
-              className="border-primary-foreground/40 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 px-8 py-5"
+              className="border-secondary/50 text-primary-foreground bg-secondary/20 hover:bg-secondary/30 px-8 py-5"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Indietro
             </Button>
-          )}
-          <Button
-            onClick={nextStep}
-            disabled={!canProceed()}
-            className="bg-secondary text-white hover:bg-secondary/80 disabled:opacity-50 px-8 py-5 font-semibold"
-          >
-            {step === totalSteps - 1 ? "Invia" : "Avanti"}
-            {step < totalSteps - 1 && <ArrowRight className="w-4 h-4 ml-2" />}
-          </Button>
-        </div>
+            <Button
+              onClick={nextStep}
+              disabled={!canProceed()}
+              className="bg-secondary text-white hover:bg-secondary/80 disabled:opacity-50 px-8 py-5 font-semibold"
+            >
+              {step === totalSteps - 1 ? "Invia" : "Avanti"}
+              {step < totalSteps - 1 && <ArrowRight className="w-4 h-4 ml-2" />}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
