@@ -19,7 +19,7 @@ const HeroSection = () => {
 
       {/* White transparent container - full height, half width, left aligned */}
       <div className="relative z-10 w-full md:w-1/2 bg-white/60 md:bg-white/50 backdrop-blur-sm flex items-center">
-        <div className="p-6 md:p-12 lg:p-16 w-full">
+        <div className="p-6 pt-24 md:p-12 md:pt-28 lg:p-16 lg:pt-32 w-full">
           {/* Decorative stripes */}
           <div className="flex gap-1 mb-4 md:mb-6">
             {[...Array(8)].map((_, i) => (
