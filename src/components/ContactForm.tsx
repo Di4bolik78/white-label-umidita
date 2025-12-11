@@ -56,6 +56,7 @@ const ContactForm = () => {
         return;
       }
     }
+    setPrivacyError(false);
     setStep(prev => Math.min(prev + 1, 3));
   };
 
