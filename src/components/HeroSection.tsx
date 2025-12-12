@@ -22,7 +22,7 @@ const HeroSection = () => {
       {/* White transparent container - full height, half width, left aligned */}
       <div className="relative z-10 w-full md:w-[45%] bg-white/60 md:bg-white/50 backdrop-blur-sm flex items-center">
         {/* Vertical social icons */}
-        <div className="hidden md:flex flex-col items-center gap-6 absolute left-6 top-1/2 -translate-y-1/2">
+        <div className="hidden md:flex flex-col items-center gap-8 absolute left-6 top-1/2 -translate-y-1/2">
           <a 
             href="https://facebook.com" 
             target="_blank" 
@@ -50,7 +50,7 @@ const HeroSection = () => {
           </a>
         </div>
 
-        <div className="p-6 pt-24 md:p-12 md:pt-28 md:pl-20 lg:p-16 lg:pt-32 lg:pl-24 w-full stagger-children">
+        <div className="p-6 pt-24 md:p-12 md:pt-28 md:pl-16 lg:p-16 lg:pt-32 lg:pl-20 w-full stagger-children">
           {/* Decorative stripes */}
           <DecorativeStripes className="mb-4 md:mb-6" />
 
