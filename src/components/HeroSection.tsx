@@ -12,15 +12,19 @@ const HeroSection = () => {
     <section className="relative min-h-[90vh] md:min-h-screen flex overflow-hidden">
       {/* Background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center md:bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 bg-no-repeat md:bg-cover md:bg-center"
+        style={{ 
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'auto 100%',
+          backgroundPosition: 'right center'
+        }}
       />
       
       {/* Dark overlay for better readability */}
-      <div className="absolute inset-0 bg-black/20 md:bg-black/30" />
+      <div className="absolute inset-0 bg-black/10 md:bg-black/20" />
 
       {/* White transparent container - full height, half width, left aligned */}
-      <div className="relative z-10 w-full md:w-[45%] bg-white/40 md:bg-white/50 backdrop-blur-sm flex items-center">
+      <div className="relative z-10 w-full md:w-[45%] bg-white/30 md:bg-white/40 backdrop-blur-sm flex items-center">
         {/* Vertical social icons */}
         <div className="hidden md:flex flex-col items-center gap-8 absolute left-6 top-1/2 -translate-y-1/2">
           <a 
