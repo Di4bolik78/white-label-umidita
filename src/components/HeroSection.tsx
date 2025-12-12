@@ -17,10 +17,10 @@ const HeroSection = () => {
       />
       
       {/* Dark overlay for better readability */}
-      <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
+      <div className="absolute inset-0 bg-black/20 md:bg-black/30" />
 
       {/* White transparent container - full height, half width, left aligned */}
-      <div className="relative z-10 w-full md:w-[45%] bg-white/60 md:bg-white/50 backdrop-blur-sm flex items-center">
+      <div className="relative z-10 w-full md:w-[45%] bg-white/40 md:bg-white/50 backdrop-blur-sm flex items-center">
         {/* Vertical social icons */}
         <div className="hidden md:flex flex-col items-center gap-8 absolute left-6 top-1/2 -translate-y-1/2">
           <a 
