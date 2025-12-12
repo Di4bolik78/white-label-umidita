@@ -12,7 +12,7 @@ const HeroSection = () => {
     <section className="relative min-h-[90vh] md:min-h-screen flex overflow-hidden">
       {/* Background image */}
       <div 
-        className="absolute inset-0 bg-no-repeat md:bg-cover md:bg-center bg-right"
+        className="hero-bg absolute inset-0 bg-no-repeat bg-right md:bg-center"
         style={{ 
           backgroundImage: `url(${heroBg})`,
         }}

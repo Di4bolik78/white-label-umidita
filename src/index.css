@@ -192,4 +192,14 @@ All colors MUST be HSL.
       transform: scaleY(1);
     }
   }
+
+  .hero-bg {
+    background-size: 130% auto;
+  }
+
+  @media (min-width: 768px) {
+    .hero-bg {
+      background-size: cover;
+    }
+  }
 }
