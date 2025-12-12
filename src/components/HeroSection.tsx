@@ -57,6 +57,35 @@ const HeroSection = () => {
           {/* Decorative stripes */}
           <DecorativeStripes className="mb-4 md:mb-6" />
 
+          {/* Mobile horizontal social icons */}
+          <div className="flex md:hidden items-center gap-6 mb-4">
+            <a 
+              href="https://facebook.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary transition-colors duration-300"
+              aria-label="Facebook"
+            >
+              <Facebook size={20} strokeWidth={1.5} />
+            </a>
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary transition-colors duration-300"
+              aria-label="Instagram"
+            >
+              <Instagram size={20} strokeWidth={1.5} />
+            </a>
+            <a 
+              href="tel:+39000000000"
+              className="text-primary hover:text-secondary transition-colors duration-300"
+              aria-label="Telefono"
+            >
+              <Phone size={20} strokeWidth={1.5} />
+            </a>
+          </div>
+
           <p className="text-primary font-medium text-base md:text-lg mb-3 md:mb-4 tracking-wide">
             Specialisti in Soluzioni contro l'Umidità
           </p>
