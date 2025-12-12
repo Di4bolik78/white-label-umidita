@@ -194,7 +194,7 @@ All colors MUST be HSL.
   }
 
   .hero-bg {
-    background-size: 250% auto;
+    background-size: 350% auto;
   }
 
   @media (min-width: 768px) {
