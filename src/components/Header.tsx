@@ -32,7 +32,7 @@ const Header = () => {
             <img 
               src={logoEliminaUmidita} 
               alt="Elimina Umidità" 
-              className="h-10 sm:h-12 md:h-14 w-auto"
+              className="h-12 sm:h-16 md:h-20 w-auto"
             />
           </a>
 
