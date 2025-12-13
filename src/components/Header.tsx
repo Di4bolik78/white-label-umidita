@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import logoEliminaUmidita from "@/assets/logo-elimina-umidita.jpg";
+import logoEliminaUmidita from "@/assets/logo-elimina-umidita.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

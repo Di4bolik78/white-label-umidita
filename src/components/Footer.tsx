@@ -1,4 +1,4 @@
-import logoEliminaUmidita from "@/assets/logo-elimina-umidita.jpg";
+import logoEliminaUmidita from "@/assets/logo-elimina-umidita.png";
 
 const Footer = () => {
   return (
