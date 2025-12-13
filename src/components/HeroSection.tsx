@@ -22,7 +22,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/10 md:bg-black/20" />
 
       {/* White transparent container - full height, half width, left aligned */}
-      <div className="relative z-10 w-full md:w-[45%] bg-white/40 md:bg-white/55 backdrop-blur-sm flex items-center">
+      <div className="relative z-10 w-full md:w-[45%] bg-white/60 md:bg-white/75 backdrop-blur-sm flex items-center">
         <div className="p-6 pt-24 md:p-12 md:pt-28 md:pl-16 lg:p-16 lg:pt-32 lg:pl-20 w-full stagger-children">
           {/* Decorative stripes */}
           <DecorativeStripes className="mb-4 md:mb-6" />
@@ -31,7 +31,7 @@ const HeroSection = () => {
             Specialisti in Soluzioni contro l'Umidità
           </p>
           
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-secondary mb-4 md:mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-[#005691] mb-4 md:mb-6 leading-tight">
             Consulenza Personalizzata<br />Contro Umidità
           </h1>
           
