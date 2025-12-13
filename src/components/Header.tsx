@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import logoEliminaUmidita from "@/assets/logo-elimina-umidita.jpg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,17 +21,19 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-primary/85 backdrop-blur-md shadow-lg py-2" 
-          : "bg-primary py-3"
+          ? "bg-white/95 backdrop-blur-md shadow-lg py-2" 
+          : "bg-white py-3"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <span className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-primary-foreground">
-              Consulta<span className="text-secondary">Umidità</span>
-            </span>
+          <a href="/" className="flex items-center">
+            <img 
+              src={logoEliminaUmidita} 
+              alt="Elimina Umidità" 
+              className="h-10 sm:h-12 md:h-14 w-auto"
+            />
           </a>
 
           {/* CTA Button */}
