@@ -48,7 +48,7 @@ const CTASection = () => {
               type="submit"
               className="btn-glow bg-secondary text-white font-semibold px-6 sm:px-8 py-5 sm:py-6 transition-all duration-300 w-full sm:w-auto"
             >
-              CHIAMAMI
+              INVIA
               <ChevronRight className="w-4 h-4 ml-1" />
             </Button>
           </form>
