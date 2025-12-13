@@ -28,11 +28,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center h-10 sm:h-12 md:h-14 overflow-hidden">
             <img 
               src={logoEliminaUmidita} 
               alt="Elimina Umidità" 
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+              className="h-[140%] w-auto object-contain"
             />
           </a>
 
