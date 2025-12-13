@@ -2,7 +2,7 @@ import logoEliminaUmidita from "@/assets/logo-elimina-umidita.png";
 
 const Footer = () => {
   return (
-    <footer className="py-8 px-4 bg-white border-t border-[#333333]/30 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_-8px_30px_rgba(0,0,0,0.15)] transition-shadow duration-300">
+    <footer className="py-8 px-4 bg-muted border-t border-[#333333]/30 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_-8px_30px_rgba(0,0,0,0.15)] transition-shadow duration-300">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex flex-col items-center md:items-start gap-1">
@@ -11,7 +11,7 @@ const Footer = () => {
               alt="Elimina Umidità" 
               className="h-16 md:h-20 w-auto"
             />
-            <span className="text-[#333333] text-base font-medium">
+            <span className="text-[#333333] text-xl md:text-2xl font-bold">
               800 123 456
             </span>
           </div>
