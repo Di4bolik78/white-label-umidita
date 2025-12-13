@@ -49,9 +49,9 @@ const SolutionsSection = () => {
 
             <ul className="space-y-3 md:space-y-4">
               {solutions.map((solution, index) => (
-                <li key={index} className="flex items-center gap-3 text-primary font-medium text-base md:text-lg group">
-                  <ChevronRight className="w-5 h-5 text-secondary flex-shrink-0 group-hover:text-aqua group-hover:translate-x-1 transition-all duration-300" />
-                  <span className="relative group-hover:text-secondary transition-colors duration-300">{solution}</span>
+                <li key={index} className="flex items-center gap-3 text-[#333333] font-medium text-base md:text-lg group cursor-pointer">
+                  <ChevronRight className="w-5 h-5 text-secondary flex-shrink-0 group-hover:text-[#009ADA] group-hover:translate-x-1 transition-all duration-300" />
+                  <span className="relative group-hover:text-[#009ADA] transition-colors duration-300">{solution}</span>
                 </li>
               ))}
             </ul>
