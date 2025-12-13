@@ -27,7 +27,7 @@ const HeroSection = () => {
           {/* Decorative stripes */}
           <DecorativeStripes className="mb-4 md:mb-6" />
 
-          <p className="text-primary font-medium text-base md:text-lg mb-3 md:mb-4 tracking-wide">
+          <p className="text-[#333333] font-bold text-base md:text-lg mb-3 md:mb-4 tracking-wide">
             Specialisti in Soluzioni contro l'Umidità
           </p>
           
@@ -35,7 +35,7 @@ const HeroSection = () => {
             Consulenza Personalizzata<br />Contro Umidità
           </h1>
           
-          <p className="text-primary text-base md:text-lg lg:text-xl mb-6 md:mb-8 leading-relaxed">
+          <p className="text-[#333333] font-bold text-base md:text-lg lg:text-xl mb-6 md:mb-8 leading-relaxed">
             Disponiamo di professionisti sul territorio nazionale per rispondere ai tuoi problemi di umidità e offrirti una soluzione definitiva.
           </p>
           
