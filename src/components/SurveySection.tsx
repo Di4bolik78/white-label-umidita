@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react";
 
 const regions = [
   "Lombardia", "Piemonte", "Liguria", "Valle D'Aosta", "Veneto", 
-  "Trentino Alto Adige", "Emilia Romagna", "Marche", "Umbria", "Toscana", "Lazio"
+  "Friuli-Venezia Giulia", "Trentino Alto Adige", "Emilia Romagna", "Marche", "Umbria", "Toscana", "Lazio"
 ];
 
 const humidityTypes = [
