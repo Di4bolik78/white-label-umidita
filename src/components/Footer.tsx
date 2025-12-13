@@ -9,7 +9,7 @@ const Footer = () => {
             <img 
               src={logoEliminaUmidita} 
               alt="Elimina Umidità" 
-              className="h-12 w-auto"
+              className="h-16 md:h-20 w-auto"
             />
             <span className="text-primary-foreground/90 text-base font-medium">
               800 123 456
