@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import DecorativeStripes from "@/components/DecorativeStripes";
 
 const solutions = [
-  "UMIDITÀ DI RISALITA",
+  "UMIDITÀ DA RISALITA",
   "CONDENSA",
   "INFILTRAZIONI LATERALI",
   "MUFFA SULLE PARETI",
