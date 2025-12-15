@@ -11,7 +11,7 @@ const humidityTypes = [
   },
   {
     number: "02",
-    title: "Umidità da Risalita",
+    title: "Umidità di Risalita",
     description: "Macchie di umidità nelle parti basse delle tue pareti.",
     icon: ArrowUp,
     gradient: "from-emerald-500/20 via-secondary/30 to-green-500/20",
