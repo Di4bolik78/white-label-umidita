@@ -12,7 +12,7 @@ const faqs = [
     answer: "I primi sintomi dell'umidità da condensa sono piccole macchie nere di muffa negli angoli e sulle pareti, specchi appannati o gocce d'acqua sulle finestre. Questo tipo di umidità si forma quando il vapore acqueo presente nell'aria interna entra in contatto con una superficie fredda e passa allo stato liquido, bagnando così la superficie.",
   },
   {
-    question: "Come eliminare l'umidità da risalita capillare?",
+    question: "Come eliminare l'umidità di risalita capillare?",
     answer: "Questo tipo di umidità si verifica quando l'acqua sotterranea entra in contatto con le fondamenta degli edifici. Per risolvere un problema di umidità da capillarità si praticano delle specifiche iniezioni nella parte interna o esterna del muro (in base allo spessore della parete) e si inietta una soluzione chimica che crea una barriera in grado di impedire all'acqua di risalire lungo la parete.",
   },
   {

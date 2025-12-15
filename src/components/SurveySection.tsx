@@ -10,7 +10,7 @@ const regions = [
 ];
 
 const humidityTypes = [
-  "Umidità da risalita capillare",
+  "Umidità di risalita capillare",
   "Umidità da condensa",
   "Umidità da infiltrazione",
   "Umidità da perdite",
