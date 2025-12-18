@@ -21,16 +21,18 @@ const Footer = () => {
             </a>
           </div>
           
-          <p className="text-[#333333] text-sm">
-            © {new Date().getFullYear()} Elimina Umidità. Tutti i diritti riservati.
-          </p>
-          
-          <div className="flex gap-6">
+          <div className="text-center md:text-right">
+            <p className="text-[#333333] text-sm">
+              Sede legale: Via Paleocapa 6, Milano 20121 | P.IVA 06412140961 | Capitale sociale: € 100.000,00
+            </p>
+            <p className="text-[#333333] text-sm">
+              N. REA: MI-1891490
+            </p>
+            <p className="text-[#333333] text-sm mt-2">
+              © {new Date().getFullYear()} Elimina Umidità. Tutti i diritti riservati.
+            </p>
             <a href="#" className="text-[#333333] hover:text-secondary transition-colors duration-300 text-sm">
               Privacy Policy
-            </a>
-            <a href="#" className="text-[#333333] hover:text-secondary transition-colors duration-300 text-sm">
-              Cookie Policy
             </a>
           </div>
         </div>
