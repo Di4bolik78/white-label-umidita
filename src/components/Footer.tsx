@@ -21,7 +21,7 @@ const Footer = () => {
             </a>
           </div>
           
-          <div className="text-center md:text-right">
+          <div className="text-center flex-1">
             <p className="text-[#333333] text-sm">
               Sede legale: Via Paleocapa 6, Milano 20121 | P.IVA 06412140961 | Capitale sociale: € 100.000,00
             </p>
@@ -33,7 +33,7 @@ const Footer = () => {
             </p>
           </div>
           
-          <a href="#" className="text-[#333333] hover:text-secondary transition-colors duration-300 text-sm">
+          <a href="#" className="text-[#333333] hover:text-secondary transition-colors duration-300 text-sm md:text-right">
             Privacy Policy
           </a>
         </div>
