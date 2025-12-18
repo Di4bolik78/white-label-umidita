@@ -31,10 +31,11 @@ const Footer = () => {
             <p className="text-[#333333] text-sm mt-2">
               © {new Date().getFullYear()} Elimina Umidità. Tutti i diritti riservati.
             </p>
-            <a href="#" className="text-[#333333] hover:text-secondary transition-colors duration-300 text-sm">
-              Privacy Policy
-            </a>
           </div>
+          
+          <a href="#" className="text-[#333333] hover:text-secondary transition-colors duration-300 text-sm">
+            Privacy Policy
+          </a>
         </div>
       </div>
     </footer>
