@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
+# EliminaUmidità – Landing Page White Label
 
-## Project info
+Documentazione descrittiva e funzionale della **Landing Page White Label EliminaUmidità**, basata sull’implementazione disponibile all’indirizzo demo e pensata per la promozione e la lead generation di servizi per l’eliminazione dell’umidità.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 📌 Panoramica del progetto
 
-There are several ways of editing your application.
+**EliminaUmidità** è una landing page moderna, sviluppata come soluzione **white label**, progettata per essere riutilizzata e personalizzata da diverse aziende o partner operanti nel settore del risanamento edilizio e dei servizi contro l’umidità.
 
-**Use Lovable**
+La landing è orientata alla **conversione dell’utente** e alla **raccolta di contatti qualificati**, con una struttura semplice, chiara e focalizzata sul valore del servizio offerto.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🎯 Obiettivi del progetto
 
-**Use your preferred IDE**
+* Generazione di lead tramite form di contatto
+* Supporto a campagne di marketing digitale (Google Ads, Social Ads)
+* Comunicazione chiara del problema dell’umidità e delle relative soluzioni
+* Facilità di personalizzazione per utilizzo white label
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧱 Struttura funzionale della landing
 
-Follow these steps:
+La landing page è organizzata in sezioni sequenziali pensate per accompagnare l’utente verso la conversione:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+* **Hero section** con proposta di valore e call-to-action primaria
+* **Sezioni informative** dedicate a problema, cause e conseguenze dell’umidità
+* **Sezione soluzione** con focus sui benefici per l’utente finale
+* **Call-to-action ripetute** lungo la pagina
+* **Form di contatto** per richiesta informazioni o sopralluogo
+* **Footer** con informazioni di servizio e riferimenti legali
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🛠️ Stack tecnologico
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+La landing page è sviluppata utilizzando uno stack moderno, orientato a performance, SEO e rapidità di sviluppo:
 
-**Edit a file directly in GitHub**
+* **Framework**: Next.js
+* **Libreria UI**: React
+* **Build tool**: Vite.js
+* **Styling**: Tailwind CSS
+* **Versionamento**: Git + GitHub
+* **Hosting**: Vercel
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🧩 Modello White Label
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Il progetto segue un approccio **white label**, che consente:
 
-## What technologies are used for this project?
+* personalizzazione di logo, colori e testi;
+* adattamento della comunicazione al brand del partner;
+* utilizzo della stessa base tecnica per più clienti;
+* separazione tra struttura applicativa e contenuti.
 
-This project is built with:
+Questo modello permette una rapida replicabilità della landing e una riduzione dei tempi di implementazione.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🌍 SEO e performance
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+La landing è progettata per garantire:
 
-## Can I connect a custom domain to my Lovable project?
+* struttura semantica HTML corretta;
+* tempi di caricamento ridotti;
+* compatibilità con strumenti di analisi SEO;
+* efficacia in contesti di advertising e traffico a pagamento.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🔐 Gestione accessi e permessi
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+* Il progetto è versionato su GitHub
+* L’accesso alla repository è gestito tramite organizzazioni e ruoli
+* Le modifiche possono essere regolate tramite branch e pull request
+
+---
+
+## 📈 Evoluzioni future
+
+* Integrazione con sistemi CRM
+* Automazioni di gestione lead
+* Tracciamento avanzato delle conversioni
+* Versioni multi-brand e multi-dominio
+* Eventuale estensione multi-lingua
+
+---
+
+*Documento destinato a uso interno e collaborativo. Aggiornabile nel tempo.*
