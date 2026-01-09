@@ -36,7 +36,7 @@ const SolutionsSection = () => {
               className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-5 font-semibold transition-all duration-300 group hover-lift w-full sm:w-auto"
             >
               <Phone className="w-4 h-4 mr-2" />
-              800 123 456
+              800 932 636
               <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
@@ -49,7 +49,10 @@ const SolutionsSection = () => {
 
             <ul className="space-y-3 md:space-y-4">
               {solutions.map((solution, index) => (
-                <li key={index} className="flex items-center gap-3 text-[#333333] font-medium text-base md:text-lg group cursor-pointer">
+                <li
+                  key={index}
+                  className="flex items-center gap-3 text-[#333333] font-medium text-base md:text-lg group cursor-pointer"
+                >
                   <ChevronRight className="w-5 h-5 text-secondary flex-shrink-0 group-hover:text-[#009ADA] group-hover:translate-x-1 transition-all duration-300" />
                   <span className="relative group-hover:text-[#009ADA] transition-colors duration-300">{solution}</span>
                 </li>
