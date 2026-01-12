@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
             <p className="text-[#333333] text-sm">N. REA: MI-1891490</p>
             <p className="text-[#333333] text-sm mt-2">
-              © {new Date().getFullYear()} Elimina Umidità. Tutti i diritti riservati.
+              © {new Date().getFullYear()} Eliminaumidita.it. Tutti i diritti riservati.
             </p>
           </div>
 
